@@ -10,6 +10,7 @@
   const lengthEl = document.getElementById('length');
   const statusEl = document.getElementById('status');
   const padButtons = Array.from(document.querySelectorAll('.btn'));
+  const restartBtn = document.getElementById('restartButton');
   
   // Проверяем, что элементы найдены
   if (!gameEl || !lengthEl || !statusEl) {
@@ -318,4 +319,7 @@
   gameEl.addEventListener('dblclick', () => {
     resetGame();
   });
+  restartBtn.addEventListener('click', () => {
+  resetGame();
+});
 })();
